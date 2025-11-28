@@ -14,52 +14,73 @@ st.set_page_config(
     
 )
 
-st.markdown(
-    """
-    <style>
-    /* Tło górnej belki */
-    header, .css-1v3fvcr {
-        background-color: #fff8ef !important;
-    }
-    /* Styl przycisków w st.pills */
-    button[aria-selected="true"] {
-        background-color: #ff4b00 !important;
-        color: white !important;
-    }
-    /* Tło wykresów (np. Plotly) */
-    .plot-container {
-        background-color: #fff8ef !important;
-    }
-	
-	 .stApp {
-        background-color: #fff8ef;
-    }
 
-    /* Tło zaznaczonego przycisku w st.radio */
-    div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"][aria-checked="true"] > div:first-child {
-        background-color: #8b6f47 !important;
-        border-color: #8b6f47 !important;
-    }
-    /* Kolor tekstu zaznaczonego przycisku */
-    div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"][aria-checked="true"] span {
-        color: white !important;
-    }
-    /* Kolor tekstu przycisków st.radio */
-    div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"] span {
-        color: #8b6f47 !important;
-    }
-    /* Obwódka przycisków */
-    div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"] > div:first-child {
-        border: 2px solid #8b6f47 !important;
-    }
+st.markdown("""
+<style>
+/* Tło górnej belki */
+header, .css-1v3fvcr {
+    background-color: #fff8ef !important;
+    color: black !important;
+}
 
-     input[type="radio"] {
-        accent-color: #8b6f47 !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+/* Styl przycisków w st.pills */
+button[aria-selected="true"] {
+    background-color: #ff4b00 !important;
+    color: white !important;
+}
+
+/* Tło wykresów (np. Plotly) */
+.plot-container {
+    background-color: #fff8ef !important;
+    color: black !important;
+}
+
+.stApp {
+    background-color: #fff8ef !important;
+    color: black !important;
+}
+
+/* Tło zaznaczonego przycisku w st.radio */
+div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"][aria-checked="true"] > div:first-child {
+    background-color: #8b6f47 !important;
+    border-color: #8b6f47 !important;
+}
+/* Kolor tekstu zaznaczonego przycisku */
+div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"][aria-checked="true"] span {
+    color: white !important;
+}
+/* Kolor tekstu przycisków st.radio */
+div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"] span {
+    color: black !important;
+}
+/* Obwódka przycisków */
+div.row-widget.stRadio div[role="radiogroup"] label[data-baseweb="radio"] > div:first-child {
+    border: 2px solid #8b6f47 !important;
+}
+
+input[type="radio"] {
+    accent-color: #8b6f47 !important;
+}
+
+/* Ogólny tekst w aplikacji */
+.stMarkdown, .stText, p, h1, h2, h3, h4, h5, h6, span, div {
+    color: black !important;
+}
+
+/* Tekst w sidebar */
+section[data-testid="stSidebar"] {
+    color: black !important;
+}
+section[data-testid="stSidebar"] * {
+    color: black !important;
+}
+
+/* Tekst w metric */
+div[data-testid="metric-container"] * {
+    color: black !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 MODEL_NAME = "welcome_survey_clustering_pipeline_v1"
 
